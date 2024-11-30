@@ -4,4 +4,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #D8D9E2;
+  height: 100vh;
 }
