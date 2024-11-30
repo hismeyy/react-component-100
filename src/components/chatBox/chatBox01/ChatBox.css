@@ -1,0 +1,129 @@
+/* 聊天框主容器 */
+.chat-box {
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* 输入区域样式 */
+.chat-box .chat-input {
+    width: 100%;
+    background-color: #F3F4F6;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 20px 20px 10px;
+}
+
+/* 文本输入框样式 */
+.chat-box .chat-input textarea {
+    width: 100%;
+    min-height: 45px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: none;
+    overflow-y: auto;
+    word-break: break-all;
+}
+
+/* 滚动条样式 */
+.chat-box .chat-input textarea::-webkit-scrollbar {
+    width: 4px;
+}
+
+.chat-box .chat-input textarea::-webkit-scrollbar-thumb {
+    background-color: #d4d4d4;
+    border-radius: 2px;
+}
+
+.chat-box .chat-input textarea::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* 字数统计容器 */
+.chat-box .chat-input div {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+/* 字数统计文本 */
+.chat-box .chat-input span {
+    font-size: 14px;
+    color: #bbbbbb;
+}
+
+/* 功能区域样式 */
+.chat-functions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* 左侧功能区 */
+.chat-functions .left {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-functions .left div {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+/* 表情选择器触发器 */
+.chat-functions .left .emoji-trigger {
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+/* 表情选择器定位 */
+.chat-functions .left .emoji-picker {
+    position: absolute;
+    top: 30px;
+    left: -10px;
+    z-index: 5;
+}
+
+/* 功能按钮悬浮效果 */
+.chat-functions .left div:hover {
+    color: #f08a5d;
+}
+
+/* 发布按钮样式 */
+.chat-functions .right button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: #f08a5d;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chat-functions .right button:hover {
+    background-color: #f1946c;
+}
+
+/* 图片展示区域 */
+.chat-box .chat-imgs {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px;
+}
