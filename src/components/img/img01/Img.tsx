@@ -23,7 +23,7 @@ const Img = ({ src, alt, size = 'small', onClose }: ImgProps) => {
     if (!visible) return null;
 
     return (
-        <div className='img-container'>
+        <div className={`img-container img-${size}`}>
             <button className={`img-close img-close-${size}`} onClick={handleClose}><MdClose /></button>
             <div className={`img img-${size}`} onClick={() => setShowPreview(true)}>
                 <img src={src} alt={alt} />
