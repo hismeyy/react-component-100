@@ -1,0 +1,167 @@
+/* 聊天列表容器 */
+.chat-list {
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+}
+
+/* 聊天项目列表 */
+.chat-list .chat-items {
+    all: unset;
+}
+
+/* 单个聊天项目 */
+.chat-list .chat-items .chat-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 20px 0;
+}
+
+/* 聊天项目分隔线 */
+.chat-list .chat-items .chat-item::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #e6e6e6;
+    margin-top: 20px;
+}
+
+/* 用户信息区域 */
+.chat-list .chat-items .chat-item .chat-info {
+    height: 50px;
+    display: flex;
+    justify-content: left;
+}
+
+/* 用户头像 */
+.chat-list .chat-items .chat-item .chat-info .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* 头像悬停效果 */
+.chat-list .chat-items .chat-item .chat-info .user-avatar:hover {
+    transform: scale(1.05);
+}
+
+/* 头像图片 */
+.chat-list .chat-items .chat-item .chat-info .user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 用户信息容器 */
+.chat-list .chat-items .chat-item .chat-info .user-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    gap: 5px;
+}
+
+/* 用户名称 */
+.chat-list .chat-items .chat-item .chat-info .user-info .user-name {
+    all: unset;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* 发送时间 */
+.chat-list .chat-items .chat-item .chat-info .user-info .send-time {
+    all: unset;
+    display: block;
+    font-size: 12px;
+    color: #B3B3B3
+}
+
+/* 聊天内容区域 */
+.chat-list .chat-items .chat-item .chat-content {
+    margin-top: 15px;
+}
+
+/* 聊天内容文本 */
+.chat-list .chat-items .chat-item .chat-content p {
+    all: unset;
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    box-orient: vertical;
+    cursor: pointer;
+}
+
+/* 互动功能区域 */
+.chat-list .chat-items .chat-item .chat-functions {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: left;
+    font-size: 14px;
+    color: #B3B3B3;
+}
+
+/* 互动按钮 */
+.chat-list .chat-items .chat-item .chat-functions div {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    cursor: pointer;
+    color: #292929;
+    transition: all 0.3s ease
+}
+
+/* 互动按钮悬停效果 */
+.chat-list .chat-items .chat-item .chat-functions div:hover {
+    color: #f08a5d;
+}
+
+/* 信息卡片淡入动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 信息卡片淡出动画 */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+/* 信息卡片容器 */
+.info-card-container {
+    pointer-events: auto;
+    animation: fadeIn 0.2s ease-out forwards;
+}
+
+.info-card-container.fade-out {
+    animation: fadeOut 0.2s ease-out forwards;
+}
