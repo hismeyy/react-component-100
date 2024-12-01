@@ -1,0 +1,135 @@
+.info-card {
+    box-sizing: border-box;
+    width: 430px;
+    height: 200px;
+    border-radius: 25px;
+    padding: 25px;
+    background-color: #F5F5F5;
+    border: 1px solid #b9b9b9;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+
+}
+
+.info-card .info {
+    display: flex;
+
+}
+
+
+.info-card .info .info-avatar {
+    height: 60px;
+    position: relative;
+
+}
+
+.info-card .info .info-avatar .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #b9b9b9;
+}
+
+.info-card .info .info-avatar .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-card .info .info-avatar .tip-logo {
+    position: absolute;
+    bottom: 2px;
+    right: -4px;
+    width: 20px;
+    height: 20px;
+    background-color: #FA7D73;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+    z-index: 1;
+}
+
+.info-card .info .about-me {
+    margin-left: 20px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.info-card .info .about-me h6 {
+    all: unset;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.info-card .info .about-me p {
+    all: unset;
+    display: block;
+    color: #696969;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+}
+
+
+.info-card .labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 10px;
+    color: #5c5c5c;
+}
+
+.info-card .labels .label {
+    background-color: #e2e2e2;
+    padding: 2px 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.info-card .buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.info-card .buttons button {
+    all: unset;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    width: 50px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.info-card .buttons button:hover {
+    transform: translateY(-2px);
+    opacity: 0.8;
+}
+
+.info-card .buttons button:first-child {
+    background-color: #FA7D73;
+    color: #fff;
+}
+
+.info-card .buttons button:last-child {
+    background-color: rgb(101, 124, 224);
+    color: #fff;
+}
