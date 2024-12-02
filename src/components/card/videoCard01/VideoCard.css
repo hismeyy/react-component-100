@@ -1,0 +1,110 @@
+.video-card{
+    width: 240px;
+    height: 95px;
+    box-sizing: border-box;
+    background-color: #FEECBA;
+    border-radius: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 5px 5px 5px 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1)
+}
+
+.video-card .video{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: pink;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.video-card .video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-card .line{
+    width: 2px;
+    height: 60px;
+    background-color: rgb(211, 211, 211);
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 2px;
+}
+
+.video-card .info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.video-card .info .video-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4d4d4d;
+}
+
+.video-card .info .video-functions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.video-card .info .video-functions button{
+    all: unset;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #4d4d4d;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-card .info .video-functions button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.video-card .info .video-functions button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.video-card .info .video-functions button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: inherit;
+    transition: transform 0.3s ease;
+}
+
+.video-card .info .video-functions button:active::after {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+}
+
+.video-card .info .video-functions button:first-child{
+    background-color: #b57bf8;
+}
+
+.video-card .info .video-functions button:last-child{
+    background-color: #f08a5d;
+}
