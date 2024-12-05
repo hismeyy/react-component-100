@@ -1,20 +1,20 @@
-import VideoCard from './components/card/videoCard01/VideoCard'
 import './App.css'
+import InfoCard from './components/card/infoCard05/InfoCard';
 
 function App() {
-  const handleMoreClick = () => {
-    console.log('查看更多信息');
-  };
 
   return (
-    <div className="App">
-      <VideoCard
-        videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
-        title="萌宠日常"
-        onMoreClick={handleMoreClick}
-      />
-    </div>
+    <InfoCard 
+      name="Jane Doe"
+      birthday="1985年7月20日"
+      location="美国，纽约"
+      job="软件工程师"
+      email="jane.doe@example.com"
+      avatarSrc="https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=500&h=500&q=80"
+      avatarAlt="Jane Doe的头像"
+    />
   );
 }
 
 export default App;
+
